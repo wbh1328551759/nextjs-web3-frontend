@@ -11,14 +11,12 @@ import { WagmiProvider as CacheWagmiProvider, fallback } from 'wagmi';
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { okxWallet, bitgetWallet, bybitWallet } from '@rainbow-me/rainbowkit/wallets';
 import merge from 'lodash.merge';
-import IconBevm from '@/assets/icon_bevm.svg'
 
 const { wallets } = getDefaultWallets();
 
 export const BEVM_MAINNET = defineChain({
   id: 11501,
   name: 'BEVM Mainnet',
-  iconUrl: IconBevm,
   nativeCurrency: {
     name: 'BEVM',
     symbol: 'BTC',
@@ -42,7 +40,6 @@ export const BEVM_MAINNET = defineChain({
 export const BEVM_TESTNET = defineChain({
   id: 11503,
   name: 'BEVM testnet',
-  iconUrl: IconBevm,
   nativeCurrency: {
     name: 'BEVM',
     symbol: 'BTC',
